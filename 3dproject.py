@@ -29,13 +29,14 @@ def xprod(vectors) :
     A = vectors[0][1]*vectors[1][2]-vectors[0][2]*vectors[1][1]
     B = -1*(vectors[0][0]*vectors[1][2]-vectors[0][2]*vectors[1][0])
     C = vectors[0][0]*vectors[1][1]-vectors[0][1]*vectors[1][0]
-    return (A, B, C)
+    return(A, B, C)
     
 def solve_tri(vectors) :
     '''Inputs a list of 2 vectors and returns 2 magnitudes and included angle'''
     dot = vectors[0][0]*vectors[1][0]-vectors[0][1]*vectors[1][1]+vectors[0][2]*vectors[1][2]
     mag1 = math.sqrt(vectors[0][0]**2 + vectors[0][1]**2 + vectors[0][2]**2)
     mag2 = math.sqrt(vectors[1][0]**2 + vectors[1][1]**2 + vectors[1][2]**2)
+    return(math.acos(dot/(mag1*mag2)), mag1, mag2)
     
     
     
