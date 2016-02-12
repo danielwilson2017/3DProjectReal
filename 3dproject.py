@@ -38,7 +38,12 @@ def solve_tri(vectors) :
     mag2 = math.sqrt(vectors[1][0]**2 + vectors[1][1]**2 + vectors[1][2]**2)
     return(math.acos(dot/(mag1*mag2)), mag1, mag2)
     
-    
+points = three_points()
+vectors = two_vectors(points)
+xprod = xprod(vectors)
+solve_tri = solve_tri(vectors)
+
+'''
     
     
     
