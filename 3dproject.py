@@ -1,1 +1,31 @@
 
+import math
+
+def enter_point() :
+    x = float(input("Enter an x value: "))
+    y = float(input("Enter a y value: "))
+    z = float(input("Enter a z value: "))
+    return (x,y,z)
+    
+def three_points() :
+    '''Returns a list of 3 3d pts'''
+    points = []
+    for i in range(3):
+        points.append(enter_point())
+    return points
+
+def two_vectors(points) :
+    '''Inputs a list of 2 pts and returns a list of vectors from 1st pt'''
+    vectors = []
+    for i in range(2) :
+        x = points[i+1][0]-points[0][0]
+        y = points[i+1][1]-points[0][1]
+        z = points[i+1][2]-points[0][2]
+        vectors.append((x,y,z))
+    return vectors
+    
+def xprod(vectors) :
+    '''Inputs a list of 2 vector and returns A, B, C, of plane equation'''
+    A = vectors[0][1]*vectors[1][2]-vectors[0][2]*vectors[1][1]
+    B = -1*(vectors[0][0]*vectors[1][2]-vectors[0][2]*vectors[1][0])
+    
