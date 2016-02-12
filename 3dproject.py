@@ -28,4 +28,8 @@ def xprod(vectors) :
     '''Inputs a list of 2 vector and returns A, B, C, of plane equation'''
     A = vectors[0][1]*vectors[1][2]-vectors[0][2]*vectors[1][1]
     B = -1*(vectors[0][0]*vectors[1][2]-vectors[0][2]*vectors[1][0])
+    C = vectors[0][0]*vectors[1][1]-vectors[0][1]*vectors[1][0]
+    return (A, B, C)
+    
+def solve_tri(vectors) :
     
