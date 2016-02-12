@@ -46,7 +46,7 @@ solve_tri = solve_tri(vectors)
 '''Now find triangle area 2 different ways'''
 tri_area1 = 1/2*math.sqrt(xprod[0]**2+xprod[1]**2+xprod[2]**2)
 tri_area2 = 1/2*math.sin(solve_tri[0])*solve_tri[1]*solve_tri[2]
-print("Tri Area", tri_area, tri_area2)
+print("Tri Area", tri_area1, tri_area2)
 
 
 
